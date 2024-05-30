@@ -1,29 +1,63 @@
 # SMS Spam Detection with Various NLP Techniques
 
 ## Overview
-This notebook demonstrates the application of various Natural Language Processing (NLP) techniques to detect spam messages in a dataset. The following techniques are implemented:
+
+This project demonstrates the application of various Natural Language Processing (NLP) techniques to detect spam messages in a dataset. The following techniques are implemented:
 
 - Bag of Words (BoW)
 - Term Frequency-Inverse Document Frequency (TF-IDF)
 - Word2Vec (Average Word2Vec)
 
-## 1. Setup and Data Loading
+## Dataset
 
-In this section, we will install the necessary packages and load the dataset.
+The dataset used is the "SMSSpamCollection" which consists of SMS messages labeled as 'spam' or 'ham' (not spam). The dataset is loaded and processed as a pandas DataFrame.
 
-## 2. Data Cleaning & Preprocessing
+## Preprocessing Steps
 
-We will clean and preprocess the data by removing non-alphabetic characters, converting text to lowercase, and removing stopwords. Stemming will also be applied.
+1. **Text Cleaning**: Removal of non-alphabetic characters and conversion to lowercase.
+2. **Tokenization**: Splitting text into words.
+3. **Stopword Removal**: Removing common English words that do not contribute to the meaning.
+4. **Stemming**: Reducing words to their root form.
+5. **Lemmatization**: Reducing words to their base or dictionary form.
 
-## 3. Bag of Words Model
+## Feature Extraction Techniques
 
-In this section, we will create a Bag of Words model and evaluate its performance using a Multinomial Naive Bayes classifier.
+### Bag of Words (BoW)
 
-## 4. TF-IDF Model
+The BoW model is implemented using `CountVectorizer` with bigrams and binary features. The model is then evaluated using a Multinomial Naive Bayes classifier.
 
-We will create a TF-IDF model and evaluate its performance using both a Multinomial Naive Bayes classifier and a Random Forest classifier.
+### TF-IDF
 
-## 5. Word2Vec Model
+The TF-IDF model is implemented using `TfidfVectorizer` with bigrams and binary features. The model is evaluated using both Multinomial Naive Bayes and Random Forest classifiers.
 
-In this section, we will create a Word2Vec model from scratch, apply average Word2
+### Word2Vec
+
+Word2Vec embeddings are generated using the `gensim` library. The average Word2Vec vector for each message is used as a feature, and the model is evaluated using a Random Forest classifier.
+
+## Model Evaluation
+
+The performance of each model is evaluated using the following metrics:
+- Precision
+- Recall
+- F1-Score
+- Accuracy
+
+## Results
+
+The results for each model are printed using a classification report which provides a detailed analysis of the model's performance.
+
+## Dependencies
+
+- pandas
+- nltk
+- sklearn
+- gensim
+- numpy
+- tqdm
+
+## How to Run
+
+1. Install the required packages:
+   ```bash
+   pip install pandas nltk sklearn gensim numpy tqdm
 
