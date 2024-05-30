@@ -55,9 +55,4 @@ The results for each model are printed using a classification report which provi
 - Jupyter Notebook
 - Required Python packages: `pandas`, `nltk`, `gensim`, `numpy`, `tqdm`, `sklearn`
 
-### Installation 📥
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/sms-spam-detection-nlp.git
-   cd sms-spam-detection-nlp
