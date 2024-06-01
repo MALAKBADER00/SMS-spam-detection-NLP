@@ -1,8 +1,8 @@
-# 📧 SMS Spam Detection using Various NLP Techniques 🚀
+# 📧 SMS Spam Detection using Various NLP Techniques 
 
 ## Overview
 
-Hey there! 👋 This project is my playground for practicing different Natural Language Processing (NLP) techniques to detect spam messages. Here's what I've been experimenting with:
+This project is my playground for practicing different Natural Language Processing (NLP) techniques to detect spam messages. Here's what I've been experimenting with:
 
 - 🧠 **Bag of Words (BoW)**
 - 📊 **Term Frequency-Inverse Document Frequency (TF-IDF)**
